@@ -11,7 +11,7 @@ const Playlistadd = ({data,active,setActive,song}) => {
         preview_url:song.previewUrl
         };
         setActive(data.name)
-        const res = await fetch("http://127.0.0.1:5000/addtoplaylist", {
+        const res = await fetch("https://melofi-production.up.railway.app/addtoplaylist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(sqlDetails)

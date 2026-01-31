@@ -10,7 +10,7 @@ export default function Sidebar({onNavigate,newPlaylist,currentUser,setCurrentPl
 
   useEffect(() => {
     const fetchPlaylists = async () => {
-      const res = await fetch("http://127.0.0.1:5000/playlistsbutton", {
+      const res = await fetch("https://melofi-production.up.railway.app/playlistsbutton", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: currentUser }),

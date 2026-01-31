@@ -10,7 +10,7 @@ const PlaylistTab = ({set_player_function, setcurrentsong,playlist}) => {
     if (!playlist) return;
 
     const fetchplaylist = async () => {
-      const res = await fetch("http://127.0.0.1:5000/playlistitems", {
+      const res = await fetch("https://melofi-production.up.railway.app/playlistitems", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ playlist_id: playlist.id })

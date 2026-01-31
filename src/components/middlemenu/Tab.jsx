@@ -8,7 +8,7 @@ const Tab = ({heading,set_player_function, setcurrentsong,song,Active_tab,userna
     if (Active_tab!=="home") return;
 
     const fetchplaylist = async () => {
-      const res = await fetch("http://127.0.0.1:5000/recentlyplayed", {
+      const res = await fetch("https://melofi-production.up.railway.app/recentlyplayed", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username:username })

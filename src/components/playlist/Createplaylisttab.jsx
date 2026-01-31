@@ -6,7 +6,7 @@ const Createplaylisttab = ({currentUser,newPlaylist,setNewPlaylist}) => {
     const handlesubmit = async(e) => {
         e.preventDefault();
         console.log(currentUser)
-        const res = await fetch("http://127.0.0.1:5000/newplaylist",{
+        const res = await fetch("https://melofi-production.up.railway.app/newplaylist",{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({currentUser,newPlaylist}),

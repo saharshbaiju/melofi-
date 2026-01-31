@@ -14,7 +14,7 @@ const Globalplayer = ({song,audioElem,setCurrentSong,username}) => {
             username:username
             };
     
-            const res = await fetch("http://127.0.0.1:5000/addtorecentlyplayed", {
+            const res = await fetch("https://melofi-production.up.railway.app/addtorecentlyplayed", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(sqlDetails)
