@@ -20,7 +20,7 @@ function Login({setCurrentUser}){
         e.preventDefault();
         console.log("submitted")
 
-        const res = await fetch("https://amfoss-curriculum-production.up.railway.app/login",{
+        const res = await fetch("https://melofi-production.up.railway.app/login",{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({username,password}),
