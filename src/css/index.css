@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Doto:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Micro+5&family=Tiny5&family=Yesteryear&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* removes scrolling */
+}
+
+/* home styling */
+.full{
+    position:fixed;
+    inset:0;
+    display:flex;
+    padding:10px;
+    justify-content: left;
+}
+/* cards formatting */
+
+.middlecards{
+  position:relative;
+  margin:10px;
+  display:flex;
+  gap: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 65vw;
+  padding-right:0.6rem;
+  margin-right:2rem;
+  box-sizing: border-box;
+  scrollbar-width: none;
+ 
+  
+}
+
+.card-preview{
+  background: rgba(0, 0, 0, 0.41);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.87rem;
+  padding:10px;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:15rem;
+  height:17.375rem;
+}
+
+.middlecards img{
+  width:12.8125rem;
+  border-radius:0.87rem;
+
+}
+.middlecards h3,.bottom-cards{
+  position:relative ;
+  color:white;
+  font-family: "doto";
+  font-size: 1.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width:200px;
+  text-align: center;
+}
+
+
+
+.middlecards h4,.bottom-cards{
+  position:relative;
+  color:white;
+  font-family:"doto";
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width:200px;
+  text-align: center;
+  
+}
+
+/* recentlyplayed tab styling */
+
+.recentlyplayed ,.artistfollowing{
+  position: relative;
+  background: rgba(0, 0, 0, 0.41);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.87rem;
+  padding:10px;
+  padding-bottom: 15px;
+  margin:10px;
+  width: 65vw;
+  height:39vh;
+  display:flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 2%;
+
+
+
+}
+.recentlyplayed h1,.artistfollowing h1{
+  font-family: "doto";
+  color:white;
+  margin:5px;
+  font-size: 2.5rem;
+}
+/* bottom card css [cardlong and card artist -------------------------*/
+.bottom-cards{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap: 3px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 64vw;
+  height:39vh;
+  padding-right:0.6rem;
+  margin-right:2rem;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  margin:0px;
+ 
+}
+
+.bottom-cards img{
+  width:4rem;
+  border-radius:0.87rem;
+  position:absolute;
+  top:50%;
+  transform: translate(0,-50%);
+  left:0.5rem;
+}
+
+.cardlong-preview{
+  background: rgba(0, 0, 0, 0.41);
+  flex-shrink: 0;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.87rem;
+  padding:1px;
+  padding-bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height:5rem;
+  margin:0px;
+  overflow-y:hidden;
+  scrollbar-width: none;
+  display:inline;
+}
+
+.bottom-cards h3{
+  position:absolute;
+  left:90px;
+  top:20px;
+}
+
+.bottom-cards h4{
+  position:absolute;
+  left:90px;
+  top:40px;
+}
+
+/* sidebar styling */
+.glass {
+  background: rgba(0, 0, 0, 0.41);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.173);
+  border-radius: 0.87rem;
+  width: 14.187rem;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.logo{
+    font-family: "doto";
+    font-weight: 700;
+    color: white;
+    font-size:clamp(1rem, 5vw, 2.5rem);
+    margin-top:2vh;
+    margin-bottom: 20vh;
+}
+
+
+/* adaptive navbar buttons */
+
+.navbutton{
+    width:100%;
+    height:4vh;
+    background: none;
+    background: rgba(96, 96, 96, 0.173);
+    border: none;
+    margin-bottom: 1px;
+    opacity: 40;
+    font-family: "jetbrains mono";
+    font-weight: 700;
+    color: white;
+    font-size: clamp(2vh,1vh,vh);
+    font-weight: 100;
+    overflow: hidden;
+    
+}
+
+.active{
+    background: linear-gradient(90deg,#fe581657,#992e0300);
+    border-left:solid #f9500df9 0.3vw;
+}
+
+
+
+/* main player styling --------------*/
+
+.mainplayer{
+  position: relative;
+  background: rgba(0, 0, 0, 0.41);
+  margin:10px;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.87rem;
+  display:flex;
+  width: 100%;
+  height: 70vh
+
+}
+
+.back-button-mainplayer{
+  position:absolute;
+  width: 3rem;
+  top:5px;
+
+}
+
+.mainplayer-image{
+  width:18rem;
+  height:18rem;
+  position: absolute;
+  left:50%;
+  transform: translate(-50%,-50%);
+  top:50%;
+  border-radius: 0.87rem;
+
+  
+}
+
+.playpause{
+  width:4rem;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%,0);
+
+  
+
+}
+
+/* top panel stylings */
+
+.top-panel{
+  position:relative;
+  background: rgba(0, 0, 0, 0.41);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.87rem;
+  height: 100px;
+  width: 100%;
+  left:10px;
+  margin:0px;
+  margin-bottom: 2.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.content{
+  width:100%;
+  padding-right: 10px;
+  padding-bottom:10px;
+  position:relative;
+}
+
+.search{
+  background: rgba(127, 127, 127, 0.022);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 2rem;
+  /* width:50%;
+  height:200%; */
+  height:5vh;
+  width:40vw;
+  position:relative;
+  /* top:1.65rem;
+  left:2%; */
+  color:white;
+  font-family: "doto";
+  text-indent: 20px;
+  font-size: 1.1rem;
+  padding: 0px;
+  outline:none;
+  margin-left: 20px;
+}
+.logout{
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.profile{
+  background: rgba(127, 127, 127, 0.022);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.87rem;
+  margin-right:10px;
+  display:flex;
+  align-items: center;
+  position:relative;
+  
+}
+.logout-button{
+
+}
+.profile h3{
+  color:white;
+  font-family: "doto";
+  margin:10px;
+}
+
+.bottom-panel{
+  position:sticky;
+  background: rgba(0, 0, 0, 0.41);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.87rem;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 0px;
+  height: 6em;
+  display:flex;
+  justify-content: center;
+
+
+
+}
+
+.progress-container{
+  height:6em;
+  width:50%;
+  display:flex;
+  align-items: center;
+}
+
+.progress-wrapper{
+  position:relative;
+  background: rgba(0, 0, 0, 0.41);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.87rem;
+  width:100%;
+  height:5px;
+  display:flex;
+  justify-content: left;
+  align-items: center;
+  cursor: pointer;
+}
+
+.progress{
+  background:rgba(99, 4, 143, 0.673);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.87rem;
+  height:5px;
+
+
+}
+.tick{
+  background:none;
+  border:none
+}
+
+.create-playlist{
+  position: relative;
+  background: rgba(0, 0, 0, 0.41);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.87rem;
+  padding:10px;
+  padding-bottom: 15px;
+  margin:10px;
+  width: 65vw;
+  height:39vh;
+  margin-top: 2%;
+}
+
+.image-tick{
+  width:2rem;
+  margin-left:10px;
+}
+
+.playlist-name-input{
+  background: rgba(127, 127, 127, 0.022);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 2rem;
+  color:white;
+  font-family: "doto";
+  text-indent: 20px;
+  font-size: 1.1rem;
+  padding: 0px;
+  outline:none;
+  width:80%;
+  height:2rem;
+}
+
+.playlist-form{
+  width:100%;
+  display:flex;
+  justify-content: center;
+}
+
+
+.buttons{
+  width: 100%;
+  margin-top: 20px;
+  height:20vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+
+}
+.playlist-button-container{
+  position:absolute;
+  background: rgba(0, 0, 0, 0.41);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.87rem;
+  width:30%;
+  height:70px;
+  bottom:30px;
+  right: 20px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.button-delete{
+  background:none;
+  outline: none;
+  border: none;
+  color:white;
+  font-family: "doto";
+  position:absolute;
+  right:20px;
+  height:20px;
+  top:1.6rem;
+  z-index: 10;
+  text-align: center;
+
+}
+
+.rightbar{
+  position:absolute;
+  background: rgba(0, 0, 0, 0.41);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.87rem;
+  height:73%;
+  width:22%;
+  top: 0px;
+  right:0px;
+  top:8.4rem;
+  /* display:none; */
+
+}
+
+.sidebar-image{
+  width:10rem;
+  height:10rem;
+  position: absolute;
+  left:50%;
+  transform: translate(-50%,-50%);
+  top:50%;
+  border-radius: 0.87rem;
+
+}
+
+.sidebar-playpause{
+  width:3rem;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%,0);
+
+}
+
+.not-playing-message{
+  text-align: center;
+  color: white;
+  font-family: "doto";
+}
+
+@media (max-width: 1316px) {
+  .rightbar {
+    width:15vw;
+  }
+}
+@media (max-width: 1116px) {
+  .rightbar {
+    display:none
+  }
+}
+
+@media (max-width: 1694px) {
+  .recentlyplayed {
+    height:43vh;
+  }
+}
+@media (max-height: 849px) {
+  .recentlyplayed {
+    height:35vh;
+  }
+}
+
+@media (max-height: 985px) {
+  .recentlyplayed {
+    height:38vh;
+  }
+}

@@ -1,0 +1,161 @@
+.loginBackground {
+  background-image: url("/img/login.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBox {
+  background: rgba(0, 0, 0, 0.41);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.173);
+  border-radius: 15px;
+  width:403px;
+  height: 473px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+.playerName{
+    position:absolute;
+    top:10%;
+}
+
+.title{
+    font-family: "DOTO";
+    color:white;
+    font-size:80px;
+}
+
+.loginButton{
+    display: block;
+    background: rgba(53, 53, 53, 0.227);
+    border:1px solid rgba(255, 255, 255, 0.173);
+    font-family: "dm sans";
+    font-size:20px;
+    color:white;
+    padding: 5px;
+    border-radius:13px;
+    text-align: center;
+    width:270px;
+    height:50px;
+    margin-top: 200px;
+    transition: background-color 0.3s ease;
+}
+.loginButton:hover{background-color: rgba(39, 39, 39, 0.045);}
+.signupButton{
+    display: block;
+    background: rgba(53, 53, 53, 0.227);
+    border:1px solid rgba(255, 255, 255, 0.173);
+    font-family: "dm sans";
+    font-size:20px;
+    color:white;
+    padding: 5px;
+    border-radius:13px;
+    text-align: center;
+    width:270px;
+    height:50px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+.signupButton:hover{background-color: rgba(39, 39, 39, 0.045);}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.inputFeilds{
+    display:flex;
+    flex-direction: column;
+    margin:0px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,0);
+
+}
+
+.usernameInput{
+    border:none;
+    background:none;
+    border-bottom:solid 1px rgba(255, 255, 255, 0.173);
+    font-size: large;
+    margin-bottom: 20px;
+    color:rgb(212, 212, 212);
+}
+
+.passwordInput{
+    border:none;
+    background:none;
+    font-size: large;
+    border-bottom:solid 1px rgba(255, 255, 255, 0.173);
+    color:rgb(212, 212, 212);
+    margin-bottom:20px;
+}
+.repasswordInput{
+    border:none;
+    background:none;
+    font-size: large;
+    border-bottom:solid 1px rgba(255, 255, 255, 0.173);
+    color:rgb(212, 212, 212);
+}
+
+.usernameInput:focus{
+    outline: none;
+}
+
+.usernameInput::placeholder{
+    color:rgba(255, 255, 255, 0.369);
+}
+
+.passwordInput:focus,.repasswordInput:focus{
+    outline: none;
+}
+.passwordInput::placeholder,.repasswordInput::placeholder{
+    color:rgba(255, 255, 255, 0.369);
+}
+
+.forgotPasswordLink{
+    color:rgba(34, 4, 141, 0.821);
+    text-decoration:none;
+    font-family: "dm sans";
+    font-size: small;
+    position: relative;
+    top:5px;
+    left:60px;
+
+}
+
+.signupLink{
+    color:rgba(34, 4, 141, 0.821);
+    text-decoration:none;
+    font-family: "dm sans";
+    font-size: small;
+}
+
+.noAccount{
+    text-decoration:none;
+    font-family: "dm sans";
+    font-size: small;
+    position: absolute;
+    bottom:90px;
+    right:100px;
+    
+}
+
