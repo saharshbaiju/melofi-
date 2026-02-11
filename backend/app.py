@@ -16,7 +16,7 @@ def get_db():
         port=int(os.environ["MYSQLPORT"])
     )
 
-# -------------------- SIGNUP --------------------
+
 
 @app.route("/signup", methods=["POST"])
 def register():
@@ -43,7 +43,6 @@ def register():
         cursor.close()
         db.close()
 
-# -------------------- LOGIN --------------------
 
 @app.route("/login", methods=["POST"])
 def login():
@@ -60,7 +59,7 @@ def login():
             (username,)
         )
         result = cursor.fetchone()
-        cursor.fetchall()  # ✅ FIX: consume unread results
+        cursor.fetchall() 
 
         if result is None:
             return jsonify({"error": "invalid username"}), 401
@@ -78,7 +77,7 @@ def login():
         cursor.close()
         db.close()
 
-# -------------------- PLAYLIST --------------------
+
 
 @app.route("/newplaylist", methods=["POST"])
 def playlist():
@@ -120,7 +119,6 @@ def get_playlists():
 
     return jsonify(playlists)
 
-# -------------------- PLAYLIST ITEMS --------------------
 
 @app.route("/addtoplaylist", methods=["POST"])
 def addtoplaylist():
@@ -198,7 +196,7 @@ def delete_playlist_items():
 
     return jsonify({"msg": "song deleted"}), 200
 
-# -------------------- RECENTLY PLAYED --------------------
+
 
 @app.route("/addtorecentlyplayed", methods=["POST"])
 def addtorecently():
@@ -257,7 +255,6 @@ def fetchrecentlyplayed():
 
     return jsonify({"results": results}), 200
 
-# -------------------- ENTRY --------------------
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
